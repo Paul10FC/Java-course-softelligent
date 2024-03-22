@@ -20,6 +20,7 @@ public class MajorMinor {
         int[] userNumbers = inputNumbers();
 
         for (int i = 0; i < userNumbers.length; i++) {
+            if (i == 0) minorNumber = userNumbers[i];
             int actualNumber = userNumbers[i];
             System.out.println("The " + (i + 1) + " number is: " + actualNumber);
             majorNumber = Math.max(actualNumber, majorNumber);
