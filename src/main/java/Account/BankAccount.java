@@ -30,7 +30,7 @@ public class BankAccount {
     public void addAmountToAccount(double quantityToAdd){
 
         if (quantityToAdd > 0){
-            this.amount = amount + quantityToAdd;
+            this.amount += quantityToAdd;
             System.out.println("Great! Your new amount is " + this.amount);
         } else {
             System.out.println("You can´t input negative numbers");
@@ -70,5 +70,9 @@ public class BankAccount {
             }
         }
         return actualAccountId;
+    }
+
+    public void seeAccountData(){
+        System.out.println(this);
     }
 }

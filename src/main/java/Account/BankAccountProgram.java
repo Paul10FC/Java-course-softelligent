@@ -33,9 +33,9 @@ public class BankAccountProgram {
     }
 
     private static void loginUser() {
+        Scanner sc = new Scanner(System.in);
         boolean accountFinded = false;
         System.out.println("Please, digit your account id");
-        Scanner sc = new Scanner(System.in);
         int accountId = sc.nextInt();
 
         for (BankAccount account : bankAccounts) {
@@ -52,7 +52,7 @@ public class BankAccountProgram {
     private static void userAccount(BankAccount account) {
         System.out.println("Hello " + account.getAccountHolder() + "!");
         System.out.println("What would you like to do?");
-        System.out.println("(1) Add money to my account\t(2) Do a withdraw");
+        System.out.println("(1) Add money to my account\t(2) Do a withdraw\t(3) See account details");
 
         Scanner sc = new Scanner(System.in);
         int optionSelected = sc.nextInt();
@@ -69,6 +69,9 @@ public class BankAccountProgram {
                 System.out.println("What quantity do you want to withdraw?");
                 double quantityToWithdraw = sc.nextDouble();
                 account.withdrawMoney(quantityToWithdraw);
+                break;
+            case 3:
+                account.seeAccountData();
                 break;
             default:
                 System.out.println("Invalid option, try again");
@@ -87,17 +90,17 @@ public class BankAccountProgram {
         while (!validOption){
             System.out.println("Do you want to set an account amount?");
             System.out.println("(1) Yes\t(2) No");
+
             Scanner optionSc = new Scanner(System.in);
             int optionSelected = optionSc.nextInt();
 
             switch (optionSelected){
                 case 1:
-                    System.out.println("Write your account amount");
                     Scanner amountSc = new Scanner(System.in);
+                    System.out.println("Write your account amount");
                     int accountAmount = amountSc.nextInt();
 
                     BankAccount accountWithAmount = new BankAccount(name, accountAmount);
-
                     System.out.println("Great, account created. Your id is: " + accountWithAmount.getAccountId());
                     validOption = true;
                     break;
