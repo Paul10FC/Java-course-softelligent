@@ -1,3 +1,4 @@
+import Account.BankAccountProgram;
 import GeometryProgram.Geometry;
 
 public class Main {
@@ -9,7 +10,8 @@ public class Main {
         AlumNotes.alumsRate();
         MultiplyNum.calculator();
         MajorMinor.majorMinorCalculator();
-         */
         Geometry.areaCalculator();
+         */
+        BankAccountProgram.principalMenu();
     }
 }
