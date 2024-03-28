@@ -23,7 +23,8 @@ public class Calculator {
         int weight = sc.nextInt();
 
         Person person = new Person(gender, age, height, weight);
-        person.getBMI();
+        double bmi = person.getBMI();
+        rateBMI(bmi);
     }
 
     private static String getGender() {
@@ -53,7 +54,7 @@ public class Calculator {
         if (age < 20) throw new Exception("You are less than 20 years old");
     }
 
-    public static void rateBMI(int bmi){
+    public static void rateBMI(double bmi){
        if (bmi < 18.4){
            System.out.println("You have a less weight");
        } else if (bmi < 24.9) {

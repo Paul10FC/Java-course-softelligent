@@ -9,8 +9,10 @@ public class Person {
     private double height;
     private double weight;
 
-    public void getBMI(){
+    public double getBMI(){
+        double BMI = Math.floor( this.weight / (Math.pow(this.height, 2)));
         System.out.println("You are a " + this.gender + " " + this.age + " years old");
-        System.out.println("Your BMI is: " + Math.floor( this.weight / (Math.pow(this.height, 2))) );
+        System.out.println("Your BMI is: " + BMI);
+        return BMI;
     }
 }
