@@ -1,8 +1,9 @@
 import Account.BankAccountProgram;
+import BodyMassCalculator.Calculator;
 import GeometryProgram.Geometry;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         /*
         Average.doAverage();
         NumbersSum.program();
@@ -11,7 +12,8 @@ public class Main {
         MultiplyNum.calculator();
         MajorMinor.majorMinorCalculator();
         Geometry.areaCalculator();
-         */
         BankAccountProgram.principalMenu();
+         */
+        Calculator.massCalculator();
     }
 }
