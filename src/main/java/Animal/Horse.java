@@ -1,11 +1,9 @@
 package Animal;
 
 public class Horse extends Animal {
-    private String animalKind;
 
     public Horse(String name, String foodType, int age, String animalKind) {
-        super(name, foodType, age);
-        this.animalKind = animalKind;
+        super(name, foodType, age, animalKind);
     }
 
     @Override

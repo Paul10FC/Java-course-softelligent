@@ -4,8 +4,7 @@ public class Cat extends Animal{
     private String animalKind;
 
     public Cat(String name, String foodType, int age, String animalKind) {
-        super(name, foodType, age);
-        this.animalKind = animalKind;
+        super(name, foodType, age, animalKind);
     }
 
     @Override
