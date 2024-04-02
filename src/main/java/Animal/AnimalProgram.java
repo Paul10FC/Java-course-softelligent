@@ -9,7 +9,6 @@ public class AnimalProgram {
         int animalNumber = animalSelection();
         Animal actualAnimal = animalCreation(animalNumber);
         actualAnimal.makeSound();
-
     }
 
     private static int animalSelection() {

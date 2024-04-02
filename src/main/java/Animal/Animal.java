@@ -1,5 +1,8 @@
 package Animal;
 
+import lombok.ToString;
+
+@ToString
 public abstract class Animal {
     protected String name;
     protected String foodType;
