@@ -1,8 +1,12 @@
 package Enterprise;
 
+import lombok.ToString;
+
 public class SrDeveloper extends Employee{
-    public SrDeveloper(String name, String address, int salary, POSITIONS position) {
+    private final String programmingLanguage;
+    public SrDeveloper(String name, String address, int salary, POSITIONS position, String programmingLanguage) {
         super(name, address, salary, position);
+        this.programmingLanguage = programmingLanguage;
     }
 
     @Override
@@ -34,5 +38,16 @@ public class SrDeveloper extends Employee{
     @Override
     public void doAWorkAction() {
         System.out.println("The Sr Developer " + this.name + " is writing code");
+    }
+
+    @Override
+    public String toString() {
+        return "SrDeveloper{" +
+                "programmingLanguage='" + programmingLanguage + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", salary=" + salary +
+                ", position=" + position +
+                '}';
     }
 }

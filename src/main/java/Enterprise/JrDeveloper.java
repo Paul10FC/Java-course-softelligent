@@ -15,4 +15,14 @@ public class JrDeveloper extends Employee{
     public void doAWorkAction() {
         System.out.println("The Jr Developer " + this.name + " is debugging code");
     }
+
+    @Override
+    public String toString() {
+        return "JrDeveloper{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", salary=" + salary +
+                ", position=" + position +
+                '}';
+    }
 }

@@ -27,7 +27,13 @@ public class PrincipalEnterpriseProgram {
     }
 
     private static void doEmployeeAction() {
-        System.out.println("(1) Calculate Bonus\t(2) Generate Report\t(3) Do work action");
+        System.out.println
+                (
+                        "(1) Calculate Bonus\t" +
+                        "(2) Generate Report\t" +
+                        "(3) Do work action\t" +
+                        "(4) See employee Info"
+                );
 
         Scanner sc = new Scanner(System.in);
         int optionSelected = sc.nextInt();
@@ -36,6 +42,7 @@ public class PrincipalEnterpriseProgram {
             case 1 -> WorkActions.calculateBonus();
             case 2 -> WorkActions.generateReport();
             case 3 -> WorkActions.doWorkAction();
+            case 4 -> WorkActions.seeEmployeeInformation();
             default -> System.out.println("Invalid option, try again");
         }
     }

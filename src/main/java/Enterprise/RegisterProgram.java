@@ -36,7 +36,11 @@ public class RegisterProgram {
     public static void registerEmployee(String name, String address, int salary, POSITIONS position) {
         switch (position){
             case SR_DEVELOPER -> {
-                Employee.employees.add(new SrDeveloper(name, address, salary, position));
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Choose his programming language");
+                String programmingLanguage = sc.nextLine();
+
+                Employee.employees.add(new SrDeveloper(name, address, salary, position, programmingLanguage));
                 System.out.println("The Sr developer " + name + " was created");
             }
 
@@ -46,7 +50,11 @@ public class RegisterProgram {
             }
 
             case MANAGER -> {
-                Employee.employees.add(new Manager(name, address, salary, position));
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Choose his people manage quantity");
+                int peopleQuantityToManage = sc.nextInt();
+
+                Employee.employees.add(new Manager(name, address, salary, position, peopleQuantityToManage));
                 System.out.println("The Manager " + name + " was created");
             }
         }

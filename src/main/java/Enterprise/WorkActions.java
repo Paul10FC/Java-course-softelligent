@@ -18,6 +18,11 @@ public class WorkActions {
         employee.ifPresent(Employee::doAWorkAction);
     }
 
+    public static void seeEmployeeInformation(){
+        Optional<Employee> employee = selectEmployee();
+        employee.ifPresent(System.out::println);
+    }
+
     public static Optional<Employee> selectEmployee(){
         System.out.println("What employee do you want to see");
         System.out.println("(1) Sr Developer\t(2) Jr Developer\t(3) Manager");
