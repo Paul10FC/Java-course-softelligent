@@ -1,6 +1,7 @@
 import Account.BankAccountProgram;
 import Animal.AnimalProgram;
 import BodyMassCalculator.Calculator;
+import Enterprise.PrincipalEnterpriseProgram;
 import GeometryProgram.Geometry;
 
 import java.util.Scanner;
@@ -17,7 +18,8 @@ public class Main {
         Geometry.areaCalculator();
         BankAccountProgram.principalMenu();
         Calculator.massCalculator();
-         */
         AnimalProgram.startProgram();
+         */
+        PrincipalEnterpriseProgram.startCompanyProgram();
     }
 }
