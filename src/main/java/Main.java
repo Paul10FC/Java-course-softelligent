@@ -3,6 +3,8 @@ import Animal.AnimalProgram;
 import BodyMassCalculator.Calculator;
 import Enterprise.PrincipalEnterpriseProgram;
 import GeometryProgram.Geometry;
+import Person.PersonStartProgram;
+import polimorfismClass.PrincipalVehicleProgram;
 
 import java.util.Scanner;
 
@@ -19,7 +21,9 @@ public class Main {
         BankAccountProgram.principalMenu();
         Calculator.massCalculator();
         AnimalProgram.startProgram();
-         */
         PrincipalEnterpriseProgram.startCompanyProgram();
+        PrincipalVehicleProgram.startProgram();
+         */
+        PersonStartProgram.startProgram();
     }
 }

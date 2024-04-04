@@ -1,6 +1,6 @@
 package polimorfismClass;
 
-public class principalVehicleProgram {
+public class PrincipalVehicleProgram {
     public static void startProgram(){
         Vehicle car = new Car("FORD", 2023);
         Car car2 = new Car("Toyota", 2024);
