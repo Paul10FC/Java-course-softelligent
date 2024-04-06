@@ -42,6 +42,7 @@ public class LibraryActions {
         }
     }
 
+    // TO DO REFACTOR
     private static void returnItem() {
         boolean isValidSelection = false;
 
@@ -82,6 +83,7 @@ public class LibraryActions {
         }
     }
 
+    // TO DO REFACTOR
     private static void loanItem() {
         System.out.println("Great choose");
         System.out.println("Please type the id of the item do you want to loan");
@@ -113,3 +115,4 @@ public class LibraryActions {
 
 
 }
+    
