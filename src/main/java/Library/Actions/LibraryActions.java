@@ -20,7 +20,7 @@ public class LibraryActions {
 
             switch (actionSelected){
                 case 1 -> loanItem();
-                case 2 -> returnItem();
+                case 2 -> returnItemMenu();
                 case 3 -> watchBooks();
                 case 0 -> isActionProgramFinished = true;
                 default -> System.out.println("Invalid selection, try again");
@@ -43,47 +43,41 @@ public class LibraryActions {
     }
 
     // TO DO REFACTOR
-    private static void returnItem() {
-        boolean isValidSelection = false;
+    private static void returnItemMenu() {
+        boolean isLoanMenuFinished = false;
 
-        while (!isValidSelection) {
+        while (!isLoanMenuFinished) {
             System.out.println("What item do you want return");
             System.out.println("(1) Book\t(2) Magazine\t(0) Return");
             Scanner sc = new Scanner(System.in);
             int typeOfReturn = sc.nextInt();
 
-            switch (typeOfReturn) {
-
-                case 1 -> {
-                    System.out.println("Select your item id to return");
-                    int idToReturn = sc.nextInt();
-                    for (int i = 0; i < Library.loanedBook.size(); i++) {
-                        Book actualBook = Library.loanedBook.get(i);
-                        if (actualBook.getId() == idToReturn) {
-                            actualBook.returnItem();
-                        } else if ( i == (Library.loanedBook.size() - 1)) {
-                            System.out.println("the id your selected isn´t exist o loan");
-                        }
-                    }
-                }
-                case 2 -> {
-                    System.out.println("Select your item id to return");
-                    int idToReturn = sc.nextInt();
-                    for (int i = 0; i < Library.loanedMagazine.size(); i++) {
-                        Magazine magazine = Library.loanedMagazine.get(i);
-                        if (magazine.getId() == idToReturn) {
-                            magazine.returnItem();
-                        } else if ( i == (Library.loanedBook.size() - 1)) {
-                            System.out.println("the id your selected isn´t exist o loan");
-                        }
-                    }
-                }
-                default -> isValidSelection = true;
+            if (typeOfReturn == 1 || typeOfReturn == 2) {
+                returnItem(typeOfReturn);
+            } else {
+                isLoanMenuFinished = true;
             }
         }
     }
 
-    // TO DO REFACTOR
+    private static void returnItem(int typeOfReturn) {
+        System.out.println("Select your item id to return");
+        Scanner sc = new Scanner(System.in);
+        int idToReturn = sc.nextInt();
+
+        var itemList = typeOfReturn == 1 ? Library.loanedBook : Library.loanedMagazine;
+
+        for (int i = 0; i < itemList.size(); i++) {
+            var actualItem = itemList.get(i);
+            if (actualItem.getId() == idToReturn) {
+                actualItem.returnItem();
+
+            } else if ( i == (itemList.size() - 1)) {
+                System.out.println("the id your selected isn´t exist o loan");
+            }
+        }
+    }
+
     private static void loanItem() {
         System.out.println("Great choose");
         System.out.println("Please type the id of the item do you want to loan");

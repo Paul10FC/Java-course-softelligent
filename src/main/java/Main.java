@@ -1,14 +1,4 @@
-import Account.BankAccountProgram;
-import Animal.AnimalProgram;
-import BodyMassCalculator.Calculator;
-import Enterprise.PrincipalEnterpriseProgram;
-import GeometryProgram.Geometry;
-import Library.LibraryItem;
 import Library.LibraryProgram;
-import Person.PersonStartProgram;
-import polimorfismClass.PrincipalVehicleProgram;
-
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {

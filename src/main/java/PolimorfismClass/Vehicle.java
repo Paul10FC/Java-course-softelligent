@@ -1,4 +1,4 @@
-package polimorfismClass;
+package PolimorfismClass;
 
 import lombok.AllArgsConstructor;
 

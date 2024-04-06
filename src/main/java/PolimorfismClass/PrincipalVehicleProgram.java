@@ -1,4 +1,4 @@
-package polimorfismClass;
+package PolimorfismClass;
 
 public class PrincipalVehicleProgram {
     public static void startProgram(){

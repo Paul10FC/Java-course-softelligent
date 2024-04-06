@@ -15,33 +15,28 @@ import static Library.Library.libraryItemList;
 
 public class RegisterItem {
 
-    // REFACTOR TO DO
     public static void registerItemProgram() {
         boolean isItemSelectedSuccessfully = false;
-        System.out.println("What kind of item do you want register?");
-        System.out.println("(1) Book\t(2) Magazine\t(0) Return");
 
         while (!isItemSelectedSuccessfully){
 
+            System.out.println("(1) Continue\t(0) Return");
             Scanner sc = new Scanner(System.in);
             int optionSelected = sc.nextInt();
-
-            if (optionSelected == 1 || optionSelected == 2){
-                registerItem(optionSelected);
-                isItemSelectedSuccessfully = true;
-
-            } else if (optionSelected == 0) {
-                isItemSelectedSuccessfully = true;
-
-            } else {
-                System.out.println("Invalid option, try again");
+            switch (optionSelected){
+                case 1 -> registerItem();
+                case 0 -> isItemSelectedSuccessfully = true;
+                default -> System.out.println("Invalid Option, try again");
             }
         }
     }
 
-    private static void registerItem(int typeOfItem) {
-
+    private static void registerItem() {
+        Scanner typeOfItemScanner = new Scanner(System.in);
         Scanner itemData = new Scanner(System.in);
+
+        System.out.println("(1) Book\t(2) Magazine");
+        int typeOfItem = typeOfItemScanner.nextInt();
 
         System.out.println("Write the item's title: ");
         String title = itemData.nextLine();
@@ -122,27 +117,33 @@ public class RegisterItem {
 
     }
 
-    // REFACTOR TO DO
-    private static int generateId() {
-        boolean isUniqueNumber = false;
-        int idNumber = 0;
+        private static int generateId() {
+            boolean isUniqueNumber = false;
+            int idNUmber = 0;
 
-        while (!isUniqueNumber){
+            while (!isUniqueNumber){
+                Optional <Integer> idNumberOptional = isUniqueId();
+
+                if (idNumberOptional.isPresent()) {
+                    idNUmber = idNumberOptional.get();
+                    isUniqueNumber = true;
+                }
+            }
+            return idNUmber;
+        }
+
+        private static Optional<Integer> isUniqueId() {
             Random random = new Random();
-            idNumber = random.nextInt(10000 - 1000) + 1000;
+            int idNumber = random.nextInt(10000 - 1000) + 1000;
+
             if (!libraryItemList.isEmpty()) {
-                for (int i = 0; i < libraryItemList.size(); i++) {
-                    LibraryItem item = libraryItemList.get(i);
+                for (LibraryItem item : libraryItemList) {
                     if (item.getId() == idNumber) {
-                        break;
-                    } else if (i == (libraryItemList.size() - 1) ) {
-                        isUniqueNumber = true;
+                        return Optional.empty();
+
                     }
                 }
-            } else {
-                isUniqueNumber = true;
             }
+            return Optional.of(idNumber);
         }
-        return idNumber;
-    }
 }
