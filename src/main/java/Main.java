@@ -3,6 +3,8 @@ import Animal.AnimalProgram;
 import BodyMassCalculator.Calculator;
 import Enterprise.PrincipalEnterpriseProgram;
 import GeometryProgram.Geometry;
+import Library.LibraryItem;
+import Library.LibraryProgram;
 import Person.PersonStartProgram;
 import polimorfismClass.PrincipalVehicleProgram;
 
@@ -23,7 +25,8 @@ public class Main {
         AnimalProgram.startProgram();
         PrincipalEnterpriseProgram.startCompanyProgram();
         PrincipalVehicleProgram.startProgram();
-         */
         PersonStartProgram.startProgram();
+         */
+        LibraryProgram.principalMenu();
     }
 }
