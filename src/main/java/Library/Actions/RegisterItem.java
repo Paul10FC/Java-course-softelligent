@@ -14,6 +14,8 @@ import java.util.Scanner;
 import static Library.Library.libraryItemList;
 
 public class RegisterItem {
+
+    // REFACTOR TO DO
     public static void registerItemProgram() {
         boolean isItemSelectedSuccessfully = false;
         System.out.println("What kind of item do you want register?");
@@ -120,6 +122,7 @@ public class RegisterItem {
 
     }
 
+    // REFACTOR TO DO
     private static int generateId() {
         boolean isUniqueNumber = false;
         int idNumber = 0;
