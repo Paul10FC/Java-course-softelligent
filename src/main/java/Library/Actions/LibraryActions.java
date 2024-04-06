@@ -42,7 +42,6 @@ public class LibraryActions {
         }
     }
 
-    // TO DO REFACTOR
     private static void returnItemMenu() {
         boolean isLoanMenuFinished = false;
 
