@@ -37,7 +37,7 @@ public class LibraryActions {
             case 1 -> Library.loanedMagazine.forEach(Magazine::getInfoItem);
             case 2 -> Library.loanedBook.forEach(Book::getInfoItem);
             case 3 -> Library.libraryItemList.forEach(LibraryItem::getInfoItem);
-            case 0 -> System.out.println("Return it...");
+            case 0 -> System.out.println("Return...");
             default -> System.out.println("Invalid selection");
         }
     }
@@ -72,7 +72,7 @@ public class LibraryActions {
                 actualItem.returnItem();
 
             } else if ( i == (itemList.size() - 1)) {
-                System.out.println("the id your selected isn´t exist o loan");
+                System.out.println("the id your selected isn´t exist o loaned");
             }
         }
     }
