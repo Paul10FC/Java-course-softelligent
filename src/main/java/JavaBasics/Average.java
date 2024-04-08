@@ -1,3 +1,5 @@
+package JavaBasics;
+
 import java.util.Scanner;
 
 public class Average {
@@ -21,7 +23,7 @@ public class Average {
         }
 
        if (numberSum > 0){
-           System.out.println("Numbers Average is:");
+           System.out.println("Numbers JavaBasics.Average is:");
            System.out.println(numberSum / numbersQuantity);
        } else {
            System.out.println("too many numbers to calculate an average number");
