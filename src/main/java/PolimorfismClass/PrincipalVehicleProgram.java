@@ -1,17 +1,24 @@
 package PolimorfismClass;
 
+import PolimorfismClass.Entities.Car;
+import PolimorfismClass.Entities.CargoTruck;
+import PolimorfismClass.Entities.Motorcycle;
+import PolimorfismClass.Entities.Vehicle;
+
 public class PrincipalVehicleProgram {
     public static void startProgram(){
-        Vehicle car = new Car("FORD", 2023);
-        Car car2 = new Car("Toyota", 2024);
-
-        Vehicle motorcycle = new Motorcycle("Vento", 2000);
-        Motorcycle motorcycle1 = new Motorcycle("Italika", 2023);
+        Car car = new Car("Toyota", 2024);
+        Motorcycle motorcycle = new Motorcycle("Italika", 2023);
+        CargoTruck cargoTruck = new CargoTruck("Cargo Truck", 2020, 20);
 
         car.drive();
-        car2.drive();
+        car.accelerate();
+        car.turn(20);
 
         motorcycle.drive();
-        motorcycle1.drive();
+        motorcycle.accelerate();
+        motorcycle.turn(10);
+
+        System.out.println(cargoTruck.getChargeCapacity());
     }
 }
