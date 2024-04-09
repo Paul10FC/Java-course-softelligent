@@ -1,3 +1,4 @@
+import JavaBasics.OddNumbers;
 import Library.LibraryProgram;
 
 public class Main {
@@ -5,7 +6,6 @@ public class Main {
         /*
         JavaBasics.Average.doAverage();
         JavaBasics.NumbersSum.program();
-        JavaBasics.imparNumbers.firstTenImparNumbersProgram()
         JavaBasics.AlumNotes.alumsRate();
         JavaBasics.MultiplyNum.calculator();
         JavaBasics.MajorMinor.majorMinorCalculator();
@@ -16,7 +16,8 @@ public class Main {
         PrincipalEnterpriseProgram.startCompanyProgram();
         PrincipalVehicleProgram.startProgram();
         PersonStartProgram.startProgram();
-         */
         LibraryProgram.principalMenu();
+         */
+        OddNumbers.firstTenOddNumbersProgram();
     }
 }
