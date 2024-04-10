@@ -1,14 +1,24 @@
-import JavaBasics.OddNumbers;
+import Account.BankAccountProgram;
+import Animal.AnimalProgram;
+import BodyMassCalculator.Calculator;
+import BodyMassCalculator.Person;
+import Enterprise.PrincipalEnterpriseProgram;
+import ExceptionsProgram.MenuProgramException;
+import GeometryProgram.Geometry;
+import JavaBasics.*;
+import Library.Library;
 import Library.LibraryProgram;
+import PolimorfismClass.PrincipalVehicleProgram;
+import Person.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         /*
-        JavaBasics.Average.doAverage();
-        JavaBasics.NumbersSum.program();
-        JavaBasics.AlumNotes.alumsRate();
-        JavaBasics.MultiplyNum.calculator();
-        JavaBasics.MajorMinor.majorMinorCalculator();
+        Average.doAverage();
+        NumbersSum.program();
+        AlumNotes.alumsRate();
+        MultiplyNum.calculator();
+        MajorMinor.majorMinorCalculator();
         Geometry.areaCalculator();
         BankAccountProgram.principalMenu();
         Calculator.massCalculator();
@@ -17,7 +27,8 @@ public class Main {
         PrincipalVehicleProgram.startProgram();
         PersonStartProgram.startProgram();
         LibraryProgram.principalMenu();
-         */
         OddNumbers.firstTenOddNumbersProgram();
+         */
+        MenuProgramException.startProgram();
     }
 }
