@@ -71,4 +71,16 @@ public class ExceptionsProgram {
             System.out.println(e.getMessage());
         }
     }
+
+    public static void nullPointerException(){
+        System.out.println("This throws when something is null");
+        Object noIntNumber = null;
+
+        try {
+            System.out.println("Object: " + noIntNumber);
+            noIntNumber.toString();
+        } catch (NullPointerException e){
+            System.out.println(e.getMessage());
+        }
+    }
 }

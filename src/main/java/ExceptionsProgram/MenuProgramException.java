@@ -32,7 +32,8 @@ public class MenuProgramException {
                 case 2 -> arrayIndexOutOfBounds();
                 case 3 -> classCastException();
                 case 4 -> illegalArgumentException();
-                case 5 -> numberFormatException();
+                case 5 -> nullPointerException();
+                case 6 -> numberFormatException();
                 case 0 -> isProgramFinished = true;
                 default -> System.out.println("Invalid selection, try again");
             }
